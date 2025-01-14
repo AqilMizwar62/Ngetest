@@ -1,0 +1,103 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffe6e6, #fff2e6);
+    color: #333;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 40px 10px; /* Increased padding for better spacing */
+    background-color: #000000;
+    border-bottom: 4px solid #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 10px 0 0;
+}
+
+/* Image grid styles */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Keep 4 columns in one row */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* Keeps the grid centered */
+}
+
+/* Category image box */
+.category-image-box {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ffe6e6;
+    border-radius: 10px;
+    background-color: #fff2f2;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on image box */
+.category-image-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Category image styling */
+.category-image-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #ff9999;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on image */
+.category-image-box:hover img {
+    transform: scale(1.05);
+}
+
+/* Category description styling */
+.category-description {
+    color: #800000;
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .category-image-box {
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    .category-image-box {
+        height: 220px;
+    }
+}
